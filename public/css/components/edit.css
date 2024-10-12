@@ -1,0 +1,113 @@
+.edit-post {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 45px auto;
+  background-color: #fff;
+  padding: 3% 4%;
+  border: 1px solid #c6c6c686;
+  gap: 25px;
+}
+
+.edit-post input,
+.edit-post textarea,
+.edit-post legend,
+.edit-post select,
+.edit-post .button,
+.edit-post input::placeholder,
+.edit-post textarea::placeholder {
+  font-family: "Roboto-Medium";
+}
+
+.edit-post legend {
+  font-size: 36px;
+  line-height: 125%;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.edit-post input,
+.edit-post textarea,
+.edit-post select,
+.edit-post .button,
+.edit-post input::placeholder,
+.edit-post textarea::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.edit-post input::placeholder,
+.edit-post textarea::placeholder,
+.edit-post select {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.edit-post input,
+.edit-post textarea,
+.edit-post select {
+  width: 55%;
+  padding-left: 25px;
+}
+
+.edit-post input,
+.edit-post select {
+  line-height: 250%;
+}
+
+.edit-post select,
+.edit-post textarea {
+  padding: 15px 25px;
+}
+
+select option[hidden] {
+  display: none;
+}
+
+.edit-post .button {
+  border: none;
+  width: 125px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.input-file {
+  border-radius: 4px;
+  border: 1px solid #fff72f;
+  background: #fff72f;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 500;
+  width: 178px;
+  font-family: "Roboto-Medium";
+  font-size: 16px;
+  line-height: 300%;
+}
+
+.button-save {
+  background-color: #00a2dc;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.button-save:hover {
+  background-color: #0571ca;
+}
+
+.button-cancel {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.button-cancel:hover {
+  background-color: #d32f2f;
+}

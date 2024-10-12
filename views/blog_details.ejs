@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= blog.title %></title>
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/blog_details.css" />
+</head>
+<body>
+    <%- include('partials/header_auth') %>
+    <main>
+        <div class="post-content">
+            <img src="<%= blog.image %>" alt="Blog Image" />
+            <div class="post-content-title">
+                <h1><%= blog.title %></h1>
+            </div>
+            <div class="post-meta">
+                <span><i class="fa-regular fa-calendar"></i>Дата создания: <%= blog.createdAt.toLocaleDateString() %></span>
+                <span><i class="fa-solid fa-comments"></i>Категория: <%= blog.category %></span>
+                <span><i class="fa-solid fa-user"></i>Автор: <%= blog.username %></span>
+            </div>
+            <div class="post-description">
+                <p><%= blog.description %></p>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

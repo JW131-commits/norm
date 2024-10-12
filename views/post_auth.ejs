@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decode Blog</title>
+    <link rel="stylesheet" href="/css/all.css" />
+    <script
+      src="https://kit.fontawesome.com/f4e7d62f88.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include('partials/header_auth') %>
+    <main>
+      <section class="post">
+        <div class="post-content">
+          <img src="img/Webix Report.png" alt="post-image" />
+          <div class="post-meta" style="margin-bottom: 45px">
+            <span><i class="fa-regular fa-calendar"></i> 26.06.2020</span>
+            <span><i class="fa-solid fa-eye"></i> 21</span>
+            <span><i class="fa-solid fa-message"></i> 4</span>
+            <span><i class="fa-solid fa-comments"></i> Веб-разработка</span>
+            <span><i class="fa-solid fa-user"></i> Автор: Nast1289</span>
+          </div>
+          <div class="post-content-title">
+            <p>Обзор Report Manager от Webix</p>
+            <div class="edit_button">
+              <div style="cursor: pointer" class="edit_button_out">
+                <i class="fa-solid fa-ellipsis-vertical"></i><span>Еще</span>
+              </div>
+              <div class="edit-choice">
+                <a>Редактировать</a>
+                <a style="color: red">Удалить</a>
+              </div>
+            </div>
+          </div>
+          <p>
+            Осень 2020 года стала плодотворным временем для специалистов Webix.
+            Команда Webix выпустила восьмую версию библиотеки пользовательского
+            интерфейса Webix с двумя новыми комплексными виджетами. Первый - зто
+            Scheduler, о котором мы подробно говорили ранее. Второй виджет - это
+            Gantt chart в JavaScript. Подробную информацию об этом виджете Вы
+            можете найти в статье. Ноябрь продолжает тенденцию, и мы спешим
+            поделиться с Вами новым комплексным виджетом Report Manager. Давайте
+            рассмотрим его.
+          </p>
+          <p>
+            В отличие от обычных виджетов пользовательского интерфейса
+            JavaScript, комплексные виджеты - это полноценные приложения,
+            которые не требуют дополнительной настройки и кастомизации. Они уже
+            готовы к интеграции в Ваше бизнес-приложение, что позволяет
+            экономить рабочее время программистам. Это визуальное воплощение
+            концепции low-code платформы, которой является Webix. Комплексные
+            виджеты Webix сразу же готовы к работе, потому что они содержат
+            функциональный фронт-энд слой и, при необходимости, снабжены
+            различными опциями для бэк-энда. Гибкая архитектура Webix позволяет
+            легко настраивать эти приложения, расширять их функциональность и
+            интегрировать в существующие решения.
+          </p>
+          <div class="comment">
+            <h3>2 комментария</h3>
+            <div class="comment-item">
+              <div class="comment-item-title">
+                <img src="img/avatar.png" alt="avatar" />
+                <h3>Елнур Сеитжанов</h3>
+              </div>
+              <p>
+                В отличие от обычных виджетов пользовательского интерфейса
+                JavaScript, комплексные виджеты - это полноценные приложения,
+                которые не требуют дополнительной настройки и кастомизации.
+              </p>
+            </div>
+            <div class="comment-item">
+              <div class="comment-item-title">
+                <img src="img/avatar.png" alt="avatar" />
+                <h3>Елнур Сеитжанов</h3>
+              </div>
+              <p>
+                В отличие от обычных виджетов пользовательского интерфейса
+                JavaScript, комплексные виджеты - это полноценные приложения,
+                которые не требуют дополнительной настройки и кастомизации.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside>
+        <h2>Категории</h2>
+        <a href="">Прогнозы в IT</a>
+        <a href="">Веб-разработка</a>
+        <a href="">Мобильная разработка</a>
+        <a href="">Фриланс</a>
+        <a href="">Алгоритмы</a>
+        <a href="">Тестирование IT систем</a>
+        <a href="">Разработка игр</a>
+        <a href="">Дизайн и юзабилити</a>
+        <a href="">Искуственный интелект</a>
+        <a href="">Машинное обучение</a>
+      </aside>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

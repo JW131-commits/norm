@@ -1,0 +1,38 @@
+.post-content {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-content-title h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.post-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.post-meta span {
+    display: flex;
+    align-items: center;
+}
+
+.post-meta i {
+    margin-right: 5px;
+}

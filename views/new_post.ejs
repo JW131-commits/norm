@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decode Blog</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <script
+      src="https://kit.fontawesome.com/f4e7d62f88.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <form
+      action="/api/blog/new"
+      method="post"
+      class="new-post"
+      enctype="multipart/form-data"
+    >
+      <legend>Новый блог</legend>
+      <input type="hidden" name="date" readonly />
+      <input type="text" name="title" placeholder="Введите заголовок блога" />
+      <select name="category">
+        <option value="" selected disabled hidden>Выберите категорию</option>
+        <% categories.forEach(category => { %>
+        <option value="<%=category._id%>"><%=category.name %></option>
+        <% }) %>
+      </select>
+      <div class="image-upload">
+        <label for="file-upload" class="file-label">
+          <input
+            type="file"
+            id="file-upload"
+            accept="image/png, image/jpeg"
+            name="image"
+            style="display: none;"
+          />
+          <button
+            type="button"
+            onclick="document.getElementById('file-upload').click()"
+          >
+            Выберите картинку
+          </button>
+          <span id="file-name">Файл не выбран</span>
+        </label>
+        <label for="image-url">
+          Или вставьте URL картинки:
+          <input
+            type="text"
+            id="image-url"
+            name="imageUrl"
+            placeholder="Введите URL картинки"
+          />
+        </label>
+      </div>
+      <textarea
+        name="description"
+        rows="6"
+        placeholder="Введите описание блога"
+      ></textarea>
+      <button type="submit" class="button">Создать</button>
+    </form>
+
+    <script src="/js/script.js"></script>
+    <script>
+      document
+        .getElementById("file-upload")
+        .addEventListener("change", function () {
+          const fileName = this.files[0]
+            ? this.files[0].name
+            : "Файл не выбран";
+          document.getElementById("file-name").textContent = fileName;
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector('input[name="date"]').value = getCurrentDate();
+      });
+    </script>
+  </body>
+</html>
